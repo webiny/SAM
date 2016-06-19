@@ -15,7 +15,7 @@ class Events extends Webiny.Module {
         );
 
         this.registerRoutes(
-            new Webiny.Route('Sam.Event.List', '/sam/events', Views.EventList, 'SAM - Scripts & Events'),
+            new Webiny.Route('Sam.Event.List', '/sam/events', Views.EventList, 'SAM - Events'),
             new Webiny.Route('Sam.Event.Create', '/sam/event', Views.EventForm, 'SAM - New Event'),
             new Webiny.Route('Sam.Event.Edit', '/sam/event/:id', Views.EventForm, 'SAM - Edit Event')
         );

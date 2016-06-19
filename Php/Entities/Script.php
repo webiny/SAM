@@ -5,7 +5,7 @@ use Apps\Core\Php\DevTools\DevToolsTrait;
 use Apps\Core\Php\DevTools\Entity\EntityAbstract;
 
 /**
- * Class Event
+ * Class Script
  *
  * @property string $name
  * @property string $content
@@ -13,7 +13,7 @@ use Apps\Core\Php\DevTools\Entity\EntityAbstract;
  * @package Apps\Core\Php\Entities
  *
  */
-class Event extends EntityAbstract
+class Script extends EntityAbstract
 {
     use DevToolsTrait;
 
