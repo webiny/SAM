@@ -9,8 +9,8 @@ EventForm.defaultProps = {
             api: '/entities/sam/events',
             fields: '*',
             connectToRouter: true,
-            onSubmitSuccess: () => Webiny.Router.goToRoute('Sam.List'),
-            onCancel: () => Webiny.Router.goToRoute('Sam.List')
+            onSubmitSuccess: () => Webiny.Router.goToRoute('Sam.Event.List'),
+            onCancel: () => Webiny.Router.goToRoute('Sam.Event.List')
         };
 
         return (
@@ -38,7 +38,21 @@ EventForm.defaultProps = {
                                     <Ui.Form.Fieldset title="Event"/>
 
                                     <Ui.Input label="Name" name="name" validate="required"/>
-                                    <Ui.CodeEditor label="Content" name="content"/>
+                                    <Ui.CodeEditor label="Content" name="content" mode="javascript" validate="required" description="Place your JavaScript code here. Don't wrap it into script tags."/>
+
+                                </Ui.Grid.Col>
+
+                            </Ui.Grid.Row>
+
+                            <Ui.Grid.Row>
+                                <Ui.Grid.Col all={12}>
+
+                                    <Ui.Form.Fieldset title="About"/>
+
+                                    <p>
+                                        To execute an event, just do a call to Webiny.Sam.Event method from your JavaScript.
+                                    </p>
+                                    <pre>Webiny.Sam.Event('MyEventName');</pre>
 
                                 </Ui.Grid.Col>
 
